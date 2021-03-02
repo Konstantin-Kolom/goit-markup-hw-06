@@ -195,7 +195,7 @@
   background-position: 0  -150px;
 }
 
-/* МОДОЛЬНОЕ ОКНО*/
+/* МОДОЛЬНОЕ ОКНО - оформление*/
 .backdrop {
   position: fixed;
   z-index: 10;
@@ -221,12 +221,11 @@
   transform: translate(-50%, -50%) scale(0.4);
 }
 
-
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-
+ 
   max-width: 528px;
   width: 100%;
   max-height: 100vh;
@@ -236,7 +235,6 @@
   overflow-y: auto;
   transform: translate(-50%, -50%) scale(1) ;
   transition: transform var(--time-cubic);
-
 }
 
 .modal-btn-close {
@@ -258,8 +256,79 @@
 .icon-btn-close {
   height: 11px;
   fill: var(--button-color);
-
 }
+
+/* МОДОЛЬНОЕ ОКНО - контент*/
+.modal-title {
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-field {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
+  color: var(--modal-text-color);
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-input:focus  {
+  outline: none;
+  border: 1px solid var(--active-color);
+}
+
+.modal-group {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.icon-btn-modal {
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 28px;
+  min-width: 18px;
+  height: 18px;
+  fill: var(--button-color);
+}
+
+.modal-input:focus + .icon-btn-modal {
+  fill: var(--active-color);
+}
+
+----------------------------
+.modal-field.comit textarea {
+  resize: none;
+}
+
+.modal-input.comit {
+  padding: 12px 16px;
+  height: 100%;
+}
+--------------------------------------
+.checkbox-polici {
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  color: var( --text-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+text-decoration: none;
 
 /* Стили НАШИ ДОСТОИНСТВА ------------------------------------------*/
 .title-description {
@@ -605,13 +674,20 @@
 .icon-footer {
   display: inline-flex;
   justify-content: center;
-  margin-right: 10px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: var(--bg-frame-description);
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--time-cubic), color var(--time-cubic);
+}
+
+.item-join {
+  margin-right: 10px;
+}
+
+.item-join:last-child {
+  margin-right: 0px;
 }
 
 .icon-footer:hover,
@@ -625,7 +701,6 @@
 .footer-form {
   display: inline-flex;
   justify-content: flex-start;
-  /* position: relative; */
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
@@ -656,18 +731,24 @@
 }
 
 .btn-footer-form {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   height: 50px;
   font-size: 16px;
   line-height: 1.87;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-align: center;
+
   color: var(--text-active-color);
   background-color: var(--active-color);
-  padding: 10px 62px 10px 29px;
+
+  padding: 10px 13px 10px 29px;
   margin-left: 12px;
   margin-top: 35px;
+
   border-radius: 4px;
   border-color: var(--active-color);
   cursor: pointer;
@@ -680,6 +761,14 @@
 
 .footer-lable {
   width: 358px;
+}
+
+.btn-icon-footer {
+  display: block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: var(--text-active-color);
 }
 
 /* --------------------------------------------------------------------------- */
