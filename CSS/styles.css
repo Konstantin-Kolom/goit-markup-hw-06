@@ -181,13 +181,12 @@
   margin-top: 30px;
   overflow: visible;
   border: none;
-  outline: none; 
   box-shadow: 0px 4px 4px var(--swadow-hero);
 }   
 
-.order-button:active{
-  outline: none;
-}
+/* .order-button:active{
+  outline: solid var(--active-color);
+} */
 
 /* Фон и неконтентные картинки ГЕРОЙ*/
 .section-hero {
@@ -620,6 +619,67 @@
   background-color: var(--bg-icon-active);
   color: var(--bg-frame-description);
   transition: background-color var(--time-cubic), color var(--time-cubic);
+}
+
+/* Форма - подписка, FOOTER*/
+.footer-form {
+  display: inline-flex;
+  justify-content: flex-start;
+  /* position: relative; */
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-active-color);
+}
+
+.footer-input {
+  width: 100%; 
+  height: 50px;
+  padding-left: 16px;
+  margin-top: 20px;
+  
+  font-size: 16px;
+  line-height: 1.25 ;
+  font-weight: 400;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--bg-footer);
+ 
+}
+
+.footer-form  {
+  margin-left: 93px;
+}
+
+.btn-footer-form {
+  display: block;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--text-active-color);
+  background-color: var(--active-color);
+  padding: 10px 62px 10px 29px;
+  margin-left: 12px;
+  margin-top: 35px;
+  border-radius: 4px;
+  border-color: var(--active-color);
+  cursor: pointer;
+}
+
+.footer-form input {
+  color: var(--text-active-color);
+  background-color: var(--bg-footer)
+}
+
+.footer-lable {
+  width: 358px;
 }
 
 /* --------------------------------------------------------------------------- */

@@ -69,18 +69,85 @@
 
 </div>
 
-<form class="js-speaker-form">
-    <label for="name">Имя</label>
-    <input type="text" name="user-name" id="name">
+<!-- ФОРМА -->
+<form class="form">
+    <div class="form-fild">
+        <input type="text" class="form-input" name="user-name" id="name" placeholder="Иван Иванович">
+        <label for="name" class="form-label">Имя</label>
+        <span class="icon-form"></span>
+    </div>
+
+    <div  class="form-fild">    
+        <input type="tel" class="form-input" name="user-name" id="tel1" autofocus placeholder=" ">
+        <label for="tel1" class="form-label">Телефон</label>
+    </div>
+
+    <div  class="form-fild">
+        <label for="email">Почта</label>
+        <input type="email" name="user-name" id="email" autocomplete="off">
+    </div>
     
-    <label >
-        Имя
-        <input type="text" name="user-name">
-    </label>
+<div role="group" class="group">
+    <h2 class="group-title">Навыки</h2>
+    <ul class="topic-options">
+         <li>  
+            <input type="checkbox" name="topic" value="html" id="po1" checked>
+            <label for="po1">HTML</label>
+        </li>
+        <li>
+            <input type="checkbox" name="topic" value="css" id="po2" checked>
+           <label for="po2">CSSL</label>
+        </li>
+        <li>
+           <input type="checkbox" name="topic" value="js" id="po3">
+           <label for="po3">JS</label> 
+        </li>
+    </ul>
+</div>
+     
+<div role="group" class="group">
+    <h2 class="group-title">Уровень знаний</h2>
+    <u>
+        <li class="radio-options">
+            <input type="radio" name="level" value="jun" id="prof1" checked>
+             <label for="prof1">Junior</label>
+        </li>
+        <li>
+            <input type="radio" name="level" value="mid" id="prof2">
+            <label for="prof2">Middle</label>
+        </li>
+        <li>
+            <input type="radio" name="level" value="Sen" id="prof3">
+            <label for="prof3">Senior</label>
+        </li>
+    </u>
+</div>
     
+<div class="form-fild">
+    <label for="fil1">Загрузка файла</label>
+    <input type="file" name="pdf" value="fil1">
+</div>
+
+<div  class="form-fild">
+    <label for="data">Дата</label>
+    <input type="date" name="user-name" id="data" class="date">
+</div>
+
+<div class="form-fild">
+    <label for="comit1">Комментарий</label>
+    <textarea name="comit" id="comit1" rows="10" placeholder="Оставьте комментарий"></textarea>
+</div>
+
+    <br>
+    <input type="checkbox" name="police" id="police">
+    <label for="police">Согасен на все</label>
+
+    <br>
+    <button type="submit">Отправить</button>
 </form>
 
 
+<!-- Скрипт для формы -->
 <script>
     (() => {
         document
