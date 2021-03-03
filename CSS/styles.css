@@ -222,6 +222,8 @@
 }
 
 .modal {
+  display: inline-block;
+  box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -253,9 +255,13 @@
   overflow: visible;
 }
 
+.icon-btn-close:hover {
+  fill: var(--bg-button-active); 
+}
+
 .icon-btn-close {
   height: 11px;
-  fill: var(--button-color);
+  fill: currentColor;
 }
 
 /* МОДОЛЬНОЕ ОКНО - контент*/
@@ -264,7 +270,7 @@
   line-height: 1.15;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .modal-field {
@@ -277,13 +283,13 @@
 
 .modal-input {
   display: block;
-  width: 100%;
+  width: calc(100% - 42px);
   height: 40px;
+  padding: 0;
   padding-left: 42px;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 .modal-input:focus  {
@@ -300,7 +306,7 @@
   position: absolute;
   display: block;
   left: 12px;
-  top: 28px;
+  top: 30px;
   min-width: 18px;
   height: 18px;
   fill: var(--button-color);
@@ -310,25 +316,115 @@
   fill: var(--active-color);
 }
 
-----------------------------
-.modal-field.comit textarea {
-  resize: none;
-}
+/* комментарий -техтерия*/
 
 .modal-input.comit {
   padding: 12px 16px;
   height: 100%;
+  width: calc(100% - 32px);
+  margin-bottom: 0;
 }
---------------------------------------
+
+textarea {
+  resize: none;
+  font-family: Roboto, sans-serif;
+}
+
+textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 400;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* чекбокс */
 .checkbox-polici {
+  position: relative;
+  display: block;
+  text-align: center;
   font-size: 14px;
   line-height: 1.71;
   font-weight: 400;
-  color: var( --text-color);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 1.2em;
 }
 
-text-decoration: none;
+.contract-terms {
+  text-decoration: underline;
+  color: var(--active-color);
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* чекбокс - иконка*/
+.icon-checkbox {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 10px;
+  top: 50%;
+  border-radius: 2px;
+  border: 2px solid var(--button-color);
+  fill: var(--text-active-color);
+
+  transform: translateY(-50%) ;
+}
+
+.checkbox:checked ~ .icon-checkbox {
+  display: block;
+  fill: var(--text-active-color);
+  background-color: var(--bg-button-active);
+  border: none;
+}
+
+.checkbox-wrapper {
+  /* position: relative; */
+  /* text-align: center; */
+}
+
+.checkbox {
+  padding-left: 23px;
+}
+
+/* кнопка */
+.btn-submit-modal {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--bg-button-active);
+
+  background-color: var(--bg-button-active);
+  color: var(--text-active-color);
+
+  cursor: pointer;
+  overflow: visible;
+  border: none;
+}
+
+.submit-box {
+  display: flex;
+  justify-content: center;
+}
 
 /* Стили НАШИ ДОСТОИНСТВА ------------------------------------------*/
 .title-description {
