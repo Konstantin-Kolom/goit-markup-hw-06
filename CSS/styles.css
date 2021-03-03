@@ -348,7 +348,7 @@ textarea::placeholder {
   color: var(--text-color);
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-left: 1.2em;
+  padding-left: 30px;
 }
 
 .contract-terms {
@@ -382,22 +382,27 @@ textarea::placeholder {
   fill: var(--text-active-color);
 
   transform: translateY(-50%) ;
+  object-fit: fill;
 }
 
 .checkbox:checked ~ .icon-checkbox {
   display: block;
   fill: var(--text-active-color);
   background-color: var(--bg-button-active);
-  border: none;
+  border: 2px solid var(--bg-button-active);
+  /* box-sizing: border-box; */
+  /* width: 16px; */
+  /* height: 15px; */
+  /* border: none; */
 }
 
-.checkbox-wrapper {
-  /* position: relative; */
-  /* text-align: center; */
-}
+/* .checkbox-wrapper {
+  position: relative; */
+  /* text-align: center;
+} */
 
 .checkbox {
-  padding-left: 23px;
+  padding-left: 25px;
 }
 
 /* кнопка */
