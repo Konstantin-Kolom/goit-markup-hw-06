@@ -602,7 +602,7 @@ textarea::placeholder {
 }
 
 .staff-description {
-  margin: 30px 32px;
+  padding: 30px 32px;
 }
 
 .staff-tumb {
@@ -921,6 +921,10 @@ textarea::placeholder {
 
 .btn-line {
   margin-right: 8px;
+}
+
+.btn-line:last-child {
+  margin-right: 0px;
 }
 
 /*Стилизация Разработки - ПОРФОЛИО ------------------------------------------*/
